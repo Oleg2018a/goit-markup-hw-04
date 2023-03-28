@@ -6,6 +6,7 @@
   --primary-bg-color: #ffffff;
   --button-bg-cololr: #f4f4fd;
   --hover-focus-color: #404bbf;
+  --bg-hero-color: rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7);
 }
 body {
   background-color: var(--primary-bg-color);
@@ -29,7 +30,7 @@ p {
   margin: 0;
   padding: 0;
 }
-img{
+img {
   display: block;
   max-width: 100%;
 }
@@ -62,20 +63,17 @@ img{
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid #E7E9FC;
- 
+  border-bottom: 1px solid #e7e9fc;
 }
 
-.header-container{
+.header-container {
   display: flex;
-  
 }
 
 .header-navigation {
   display: flex;
   align-items: center;
   margin-right: auto;
- 
 }
 .logo {
   color: var(--focus-text-color);
@@ -99,8 +97,6 @@ img{
 
   display: flex;
   gap: 40px;
-  
-  
 }
 
 .header-item {
@@ -108,7 +104,6 @@ img{
 
 .header-link {
   color: var(--title-text-color);
-
 }
 .header-link:hover,
 .header-link:focus {
@@ -123,7 +118,6 @@ img{
   gap: 40px;
 }
 .address-item {
-  
 }
 .address-link {
   color: var(--primary-text-color);
@@ -138,26 +132,35 @@ img{
 /* ===========herro============= */
 .hero {
   background-color: var(--title-text-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding-top: 188px;
   padding-bottom: 188px;
   text-align: center;
-  
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.hero-container{
+.hero-container {
 }
 .hero-title {
   color: var(--primary-bg-color);
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  
+
   max-width: 497px;
   text-align: center;
   margin: 0 auto;
   margin-bottom: 48px;
 }
 .hero-button {
-  
   color: var(--primary-bg-color);
   background-color: var(--focus-text-color);
   font-family: "Roboto", sans-serif;
@@ -182,13 +185,10 @@ img{
 .advantages {
   padding-top: 120px;
   padding-bottom: 120px;
- 
 }
 .advantages-title {
- 
 }
-.advantages-container{
- 
+.advantages-container {
 }
 .advantages-list {
   display: flex;
@@ -196,13 +196,36 @@ img{
 }
 
 .advantages-item {
-  width: calc((100% - 72px) /4 );
-
+  width: calc((100% - 72px) / 4);
 }
+.abvantages-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4fd;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 8px;
+}
+.adventages-icon {
+  width: 64px;
+  height: 64px;
+}
+/* .advantages-item::before {
+  content: "";
+  display: block;
+  width: 264px;
+  height: 112px;
+  outline: 2px solid red;
+  margin-bottom: 8px;
+  background-image: url(../images/icons.svg#);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+} */
 .advantages-list-title {
 }
 .advantages-text {
- 
 }
 /* ==============================examples=============== */
 .examples {
@@ -222,13 +245,16 @@ img{
   gap: 24px;
 }
 .examples-item {
-  width: calc(( 100% - 48px) /3 );
+  width: calc((100% - 48px) / 3);
 }
 /* ====================team===================== */
 .team {
   background-color: var(--button-bg-cololr);
   padding-top: 120px;
   padding-bottom: 120px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container-team {
 }
@@ -244,18 +270,16 @@ img{
 .team-list {
   display: flex;
   gap: 24px;
-  
-
 }
 .team-item {
   background-color: var(--primary-bg-color);
-  width: calc(( 100% - 72px ) /4);
+  width: calc((100% - 72px) / 4);
   /* padding-bottom: 32px; */
 }
-.team-img{
+.team-img {
   /* margin-bottom: 32px; */
 }
-.team-wrap{
+.team-wrap {
   padding: 32px 0;
 }
 .team-list-title {
@@ -264,7 +288,31 @@ img{
 }
 .team-text {
   text-align: center;
+  margin-bottom: 8px;
 }
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.team-social-iteam {
+  width: 40px;
+  height: 40px;
+}
+.team-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--focus-text-color);
+}
+.team-social-icon {
+  /* width: 16px;
+  height: 16px; */
+}
+
 /* ======================portfolio=============== */
 .portfolio {
   padding-top: 96px;
@@ -280,10 +328,8 @@ img{
   gap: 24px;
 }
 .portfolio-item {
-
 }
 .portfolio-button {
-
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -295,7 +341,7 @@ img{
   padding: 12px 24px;
 
   border-radius: 4px;
-  border: 1px solid #E7E9FC;
+  border: 1px solid #e7e9fc;
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -307,16 +353,14 @@ img{
   flex-wrap: wrap;
   gap: 48px 24px;
 }
-.work-item{
-  width: calc(( 100% - 48px) /3);
-
-
+.work-item {
+  width: calc((100% - 48px) / 3);
 }
-.work-wrap{
-padding:32px 0 32px 16px;
-border-left: 1px solid #E7E9FC;
-border-right: 1px solid #E7E9FC;
-border-bottom: 1px solid #E7E9FC;
+.work-wrap {
+  padding: 32px 0 32px 16px;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  border-bottom: 1px solid #e7e9fc;
 }
 .work-text {
   color: var(--primary-text-color);
@@ -327,8 +371,11 @@ border-bottom: 1px solid #E7E9FC;
   background-color: var(--title-text-color);
   padding-bottom: 100px;
   padding-top: 100px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.logo-footer{
+.logo-footer {
   color: var(--focus-text-color);
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -347,3 +394,35 @@ border-bottom: 1px solid #E7E9FC;
   margin-top: 16px;
   max-width: 264px;
 }
+.footer .container {
+  display: flex;
+  gap: 120px;
+}
+.footer-text-icon {
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 1);
+}
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-social-iteam {
+  width: 40px;
+  height: 40px;
+}
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--focus-text-color);
+}
+
+/* .footer-social-icon {
+  width: 24px;
+  height: 24px;
+} */
